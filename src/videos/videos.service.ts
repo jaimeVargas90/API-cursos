@@ -12,15 +12,15 @@ export class VideosService {
     return `This action returns all videos`;
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return `This action returns a #${id} video`;
   }
 
-  update(id: number, updateVideoDto: UpdateVideoDto) {
+  update(id: string, updateVideoDto: UpdateVideoDto) {
     return `This action updates a #${id} video`;
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} video`;
   }
 }
