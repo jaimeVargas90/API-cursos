@@ -6,9 +6,19 @@ import { AuthModule } from './auth/auth.module';
 import { VideosModule } from './videos/videos.module';
 import { AwardsModule } from './awards/awards.module';
 import { UsersModule } from './users/users.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [CoursesModule, AuthModule, VideosModule, AwardsModule, UsersModule],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    CoursesModule,
+    AuthModule,
+    VideosModule,
+    AwardsModule,
+    UsersModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
