@@ -10,8 +10,10 @@ import {
 import { VideosService } from './videos.service';
 import { CreateVideoDto } from './dto/create-video.dto';
 import { UpdateVideoDto } from './dto/update-video.dto';
+import { ApiBearerAuth } from '@nestjs/swagger';
 
 @Controller('videos')
+@ApiBearerAuth()
 export class VideosController {
   constructor(private readonly videosService: VideosService) {}
 
